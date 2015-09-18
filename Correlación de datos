@@ -2,11 +2,14 @@ String mes[]={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
 int cantidad[]={10,20,30,35,11,20,35,20,30,40,30,32};
 int pataletas[]={5,4,4,2,9,5,7,8,10};
 PFont sol;
-
+PImage img;
+ 
 void setup(){
   size(550,620);
   sol = loadFont("Helvetica-20.vlw");
 textFont(sol,20);
+ // Images must be in the "data" directory to load correctly
+  img = loadImage("jaco.jpg");
 
 smooth(5);
 }
@@ -15,6 +18,7 @@ smooth(5);
 
 void draw(){
   background(255);
+  image(img,220,0);
   fill(0);
   rect(148,15,2,520);
   rect(0,570,550,50);
@@ -32,6 +36,7 @@ rect(150,35 +(ye*60),pataletas[ye],15);
 fill(0);
 text(cantidad[equis],160 + cantidad[equis],30+(equis*60));
 text(pataletas[ye],180 + pataletas[ye],50+(ye*60));
+
     }
   }
 
